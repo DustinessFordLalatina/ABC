@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Landscape Blog</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color, #f0f0f0);
+            color: #333;
+        }
+
+        /* Weather-based color scheme */
+        :root {
+            /* Placeholder colors; you can update these based on actual weather data */
+            --bg-sunny: #f7d794;
+            --bg-rainy: #9ec5e6;
+            --bg-cloudy: #cfd8dc;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--bg-color);
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .comment-section {
+            margin-top: 50px;
+        }
+
+        .comment-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .comment-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .comment-section input,
+        .comment-section textarea {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .comment-section button {
+            padding: 10px;
+            font-size: 1em;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Landscape Blog</h1>
+        <p>Sharing my landscape and interesting pictures.</p>
+    </header>
+
+    <nav>
+        <a href="#gallery">Gallery</a>
+        <a href="#comments">Comments</a>
+    </nav>
+
+    <div class="container">
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+            <h2>Gallery</h2>
+            <img src="H:\BLOG\1.jpeg" alt="宝可梦？？">
+            <img src="H:\BLOG\2.jpeg" alt="就决定是你了！皮卡丘！">
+            <img src="H:\BLOG\3.jpeg" alt="财神爷？？">
+            <img src="H:\BLOG\4.jpeg" alt="写TOTO 1009">
+            <!-- Add more images as needed -->
+        </section>
+
+        <!-- Comment Section -->
+        <section id="comments" class="comment-section">
+            <h2>Leave a Comment</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <textarea name="comment" placeholder="Your Comment" rows="5" required></textarea>
+                <button type="submit">Submit Comment</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Landscape Blog</p>
+    </footer>
+
+    <script>
+        // Example weather-based theme logic (placeholder)
+        const currentWeather = 'sunny'; // Placeholder: replace with real weather data
+
+        switch (currentWeather) {
+            case 'sunny':
+                document.documentElement.style.setProperty('--bg-color', 'var(--bg-sunny)');
+                break;
+            case 'rainy':
+                document.documentElement.style.setProperty('--bg-color', 'var(--bg-rainy)');
+                break;
+            case 'cloudy':
+                document.documentElement.style.setProperty('--bg-color', 'var(--bg-cloudy)');
+                break;
+            default:
+                document.documentElement.style.setProperty('--bg-color', '#f0f0f0');
+                break;
+        }
+    </script>
+
+</body>
+</html>
